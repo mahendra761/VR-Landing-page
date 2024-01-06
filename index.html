@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title> Drone Landing</title>
+    <title> VR Landing</title>
     <!-- css Link -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/responsive.css">
@@ -24,9 +24,11 @@
     <!-- header -->
     <header id="header">
         <div class="container">
+            <!-- <marquee behavior="" direction="left">Offer only today 50% Off</marquee> -->
             <nav class="grid grid-header">
+                
                 <a href="#" class="logo">
-                    <img src="img/logo.png" alt="logo">
+                    <img src="/img/virtual.png" alt="logo" height="70px" width="70px">
                 </a>
                 <button id="btn-menu-toggle" class="btn-menu-toggle" type="button">
                     <i class="fas fa-bars"></i>
@@ -161,61 +163,15 @@
 
 
     <section class="section bg-video bg-image" id="demo">
+        <!-- <video src="/img/pexels-tima-miroshnichenko-6500328 (2160p).mp4" autoplay muted></video> -->
         <div class="container">
             <h2 class="title">Demo video product </h2>
             <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <address href="#" class="btn-play wow animate__animated animate__zoomIn ">
+            <a href="/img/pexels-tima-miroshnichenko-6500328 (2160p).mp4" class="btn-play wow animate__animated animate__zoomIn " target="_blank">
                 <i class="fa-regular fa-circle-play"></i>
-                </address>
+                </a>
                     </div>
     </section>
-<!-- Reviews section -->
-<section class="section" id="reviews">
-    <div class="container">
-        <h3 class="short">Reviews</h3>
-        <h2 class="title">Happy user tell us</h2>
-        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <div class="grid grid3">
-            <div class="review wow animate__animated animate__zoomIn">
-                <img src="./img/review2.png" alt="review user">
-                <h3>Mayur Adlak</h3>
-                <blockquote>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</blockquote>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-o"></i>
-                    <i class="fa  fa-star-o"></i>
-                </div>
-               </div>
-            <div class="review wow animate__animated animate__zoomIn">
-                <img src="./img/dono.jpg" alt="review user">
-                <h3>pri &#10084;</h3>
-                <blockquote>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</blockquote>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-o"></i>
-                    <i class="fa  fa-star-o"></i>
-                </div>
-             
-            </div>
-            <div class="review wow animate__animated animate__zoomIn">
-                <img src="./img/tusar.png" alt="review user">
-                <h3>Rohit sirsath</h3>
-                <blockquote>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</blockquote>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-o"></i>
-                    <i class="fa  fa-star-o"></i>
-                </div>
-               </div>
-        </div>
-    </div>
-</section>
 
 <!-- pricing -->
 <section class="section" id="price">
@@ -268,6 +224,14 @@
         </div>
     </div>
 </section>
+<!-- Reviews section -->
+<section class="review-main" id="reviews">
+    <div class="wrapper">
+        <div class="testimonial-container" id="testimonial-container"></div>
+        <button id="prev">&lt;</button>
+        <button id="next">&gt;</button>
+      </div>
+    </section>
 <!-- contact section -->
 <section id="contact" class="wow animate__animated animate__zoomIn">
     <div class="bg-contact bg-image"></div>
@@ -277,18 +241,21 @@
             <div class="section-contact">
                 <h2 class="title"><i class="fa-regular fa-id-badge"></i> Contact Us</h2>
                 <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <form action="https://getform.io/f/f465d4da-98d8-4702-b3a3-0f25b6cb52d6" method="post">
-                   <label for="name">
-                        <input type="text" name="name" id="name" placeholder="Your Name">
+                <form action="https://getform.io/f/f465d4da-98d8-4702-b3a3-0f25b6cb52d6" method="post" onsubmit="submitForm(event)">
+                    <label for="name">
+                        <input type="text" name="name" id="name" placeholder="Your Name" required="off">
                     </label>
                     <label for="email">
-                        <input type="email" name="email" id="email" placeholder="Enter Your mail id">
+                        <input type="email" name="email" id="email" placeholder="Enter Your mail id" required="off">
                     </label>
                     <label for="tel">
-                        <input type="tel" name="tel" id="tel" placeholder="Your Phone Number">
+                        <input type="tel" name="tel" id="tel" placeholder="Your Phone Number" required="off">
                     </label>
                     <button type="submit">send <i class="fa-solid fa-arrow-right"></i></i></button>
                 </form>
+                
+              
+                
             </div>
         </div>
     </div>
@@ -337,6 +304,7 @@
 
     <!-- Main JS -->
     <script src="js/script.js"></script>
+   
 
     <!-- WOW Animated Complement -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>

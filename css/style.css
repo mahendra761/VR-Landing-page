@@ -14,6 +14,7 @@
     box-sizing: border-box;
     font-family:'Montserrat' , sans-serif;
     font-weight: 400;
+    /* outline: 1px solid red; */
   }
   html{
     scroll-behavior: smooth;
@@ -107,6 +108,7 @@ header{
     position: fixed;
     width: 100%;
     z-index: 1;
+    background-color: #010103b2;
 }
 .grid-header{
     grid-template-columns: 200px 1fr;
@@ -137,6 +139,7 @@ header{
 }
 .menu li a:hover{
     text-decoration: underline;
+    color: yellow;
     
 }
 /* header sticky */
@@ -255,9 +258,10 @@ grid-area: detail1;
 }
 /* video section css */
 .bg-video{
-    background-image: url(../img/bg-video.png);
+    background-image: url(/img/bg-video.png);
     background-attachment: fixed;
 }
+
 #demo{
     text-align:center;
 }
@@ -274,32 +278,96 @@ grid-area: detail1;
 }
 
 /* Review section */
-#reviews{
-    background-color: var(--color-light);
+.review-main{
+    position: relative;
+    width: 100%;
+    background-color: #0e0b0472;
+padding: 300px 0px;
+background-image: url(/img/pexels-julia-m-cameron-4144179.jpg);
+background-position: center;
+background-size: cover;
+
 }
-.review{
-    text-align: center;
-    padding: 15px 0;
-}
-.review img{
-    max-width: 150px;
-    max-height: 150px;
+.wrapper {
+    background-color: #f9f7f7fc;
+    position: absolute;
+    width: 80vw;
+    max-width: 41em;
+    min-height: 25em;
+    border-radius: 0.6em;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    box-shadow: 0 1.8em 3em rgba(1, 17, 39, 0.15);
+    display: flex;
+   
+  }
+  
+  .testimonial-container {
+    width: 85%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+    padding: 1.8em 1.2em;
+  }
+  .wrapper button {
+    font-size: 1.8em;
+    height: 2.2em;
+    width: 2.2em;
+    background-color: #ffffff;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    border: none;
+    color: #0a69ed;
+    box-shadow: 0 0 1em rgba(1, 17, 39, 0.25);
+    cursor: pointer;
     border-radius: 50%;
-}
-.review blockquote{
-    font-style: italic;
-    margin: 15px 10px;
-}
-.review h3{
-    font-size: .9em;
-    line-height: 8px;
-    margin-top: 10px;
-    text-shadow: 0px 0px 0.2    px black;
-    color: #0d0e0f;
-}
-.rating{
-    color: rgb(254, 229, 7);
-}
+  }
+  button#next {
+    right: -1.1em;
+  }
+  button#prev {
+    left: -1.1em;
+  }
+  .testimonial-container p {
+    color: #8c8c90;
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 2em;
+    letter-spacing: 0.05em;
+  }
+  .testimonial-container img {
+    display: block;
+    margin: 1.8em auto 1.25em auto;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    padding: 5px;
+    border: 3px solid orangered;
+    box-shadow: 0px 5px 20px rgba(251, 255, 0, 0.81);
+    &:hover{
+        scale: 1.1;
+    }
+  }
+  .testimonial-container h3 {
+    color: #2d3d67;
+    font-size: 1em;
+    text-align: center;
+  }
+  .testimonial-container h6 {
+    color: #bcc4da;
+    font-size: 0.9em;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+    text-align: center;
+  }
+  @media screen and (max-width: 650px) {
+    .wrapper {
+      font-size: 14px;
+    }
+  }
 /* Pricing Ssection */
 .info{
     padding: 40px 10px;
@@ -405,6 +473,7 @@ grid-area: detail1;
     background-color:rgb(250, 78, 4);
 }
 /* footer section css */
+
 footer ul,
 footer p{
     text-align: center;
@@ -417,4 +486,8 @@ footer p{
 }
 .social{
     margin-bottom: 20px;
+}
+marquee{
+    margin-top: 5px;
+    color: #fff;
 }
